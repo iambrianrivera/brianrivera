@@ -1,0 +1,12 @@
+{
+    "name": "brian/brianrivera-static",
+    "authors": [
+        {
+            "name": "iambrianrivera",
+            "email": "briankeithrivera.44@gmail.com"
+        }
+    ],
+    "require": {
+        "phpmailer/phpmailer": "^6.1"
+    }
+}
