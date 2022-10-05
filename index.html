@@ -1,11 +1,69 @@
-<?php 
-session_start();
-include('header.php'); 
-include('config.php'); 
-?>
+<html lang="en">
+<!doctype html>
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Online Portfolio | Brian Rivera</title>
+        <meta name="subject" content="Online Portfolio | Brian Rivera">
+        <meta name="description" content="This is the online portfolio of Brian Rivera.">
+        <meta name="keywords" content="web designer, web developer, brian rivera, online portfolio, brian rivera portfolio, iambrianrivera">
+        <meta property="og:image" content="img/fb-image.jpg" />
+        <link rel="icon" href="img/favico.png" type="image/png" sizes="16x16">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <!-- custom css -->
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.3.0/animate.min.css" integrity="sha256-u6lnwA08EkCXyV1q54TMAhC7qHyNiRYN4vBke87xv8g=" crossorigin="anonymous" />
+        <link rel="stylesheet" href="css/styles.min.css">
+        <link rel="stylesheet" href="css/res.min.css">
+    </head>
+    <body>
+    <div class="scrollpos"></div>
+    <div class="scrolltop">
+        <div class="scroll icon">
+            <i class="fas fa-chevron-up"></i>
+        </div>
+        </br>
+    </div>
+    <div id="loading">
+        <div id="loading-center">
+            <div id="loading-center-absolute">
+                <div id="object"></div>
+            </div>
+        </div>
+    </div>
+     <nav class="br-navbar navbar transparent navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+             <a class="navbar-brand wow fadeInLeft" href="/">
+                <img src="img/logo.svg" class="img-fluid navbar-logo" alt="Online Portfolio of Brian Rivera">
+             </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto navbar-br">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about" data-scroll>ABOUT</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#works" data-scroll>BLOGS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#skills" data-scroll>SKILLS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact" data-scroll>CONTACT</a>
+                        </li>                  
+                    </ul>
+                </div>
+        </div>
+    </nav>
 
 <div id="particles-js">
     <div class="slider-caption">
+        <img src="img/brian-rivera.png" alt="Brian Keith Rivera">
        <h1>Brian Rivera<span>.</span></h1>
         <p class="wow fadeIn">Web Designer and Developer</p>
     </div>
@@ -151,16 +209,7 @@ include('config.php');
     <div class="container">
         <div class="row br-section">
             <div class="col-md-6 br-contact-us wow fadeIn order-2 order-lg-1" data-wow-duration="1s">
-                <form class="mx-auto px-0 px-lg-5" method="POST" action="contact-send.php">
-                    <?php if ( isset($_SESSION['successMessage']) & !empty($_SESSION['successMessage'])) { ?>
-                        <div class="alert alert-success text-center" role="alert">
-                            We have successfully received your inquiry.    
-                        </div>
-                        <br>
-                    <?php 
-                        } 
-                        $_SESSION['successMessage'] = [];
-                    ?>    
+                <form class="mx-auto px-0 px-lg-5" method="POST" action="#">
                     <div class="form-group">
                         <input type="text" class="form-control" name="full_name" id="full_name" aria-describedby="nameHelp" placeholder="Name" required>
                     </div>
@@ -173,15 +222,15 @@ include('config.php');
                     <div class="form-group">
                        <textarea id="message" class="form-control" placeholder="Message/Inquiry" name="message" rows="4" cols="50"></textarea>
                     </div>
-                  <div class="form-group text-center">
+                <!--   <div class="form-group text-center">
                         <div class="g-recaptcha" data-callback="recaptchaCallback" data-sitekey="<?php echo $site_key ?>"></div>
-                    </div>    
+                    </div>   -->  
                     <button type="submit" class="btn btn-block br-btn-contact">SUBMIT</button>
                 </form>
             </div>
               <div class="col-md-6 py-auto my-auto order-1 order-lg-2 pb-3 pb-lg-0">
                 <div class="br-section-text text-center text-md-left">
-                    <h6 class="br-section-title wow fadeInRight">CONTACT US</h6>
+                    <h6 class="br-section-title wow fadeInRight">CONTACT ME</h6>
                     <h3 class="wow fadeInRight">Let’s get a project started.</h3>
                     <p class="wow fadeInRight">Whether you have a question about our services, pricing, need a demo, or anything else, our team is ready to answer all your questions.</p>
                     <div class="br-social-icons wow fadeInRight">
@@ -209,4 +258,37 @@ include('config.php');
     </div>
 </section>
 
-<?php include('footer.php') ?>
+            <footer>
+                <div class="br-footer py-5 text-center">
+                    <img src="img/logo.svg" class="img-fluid navbar-logo" alt="Online Portfolio of Brian Rivera">
+                    <ul class="br-sitemap list-inline pb-2">
+                        <li class="list-inline-item"><a href="#about">ABOUT</a></li>
+                        <li class="list-inline-item"><a href="#blogs">BLOGS</a></li>
+                        <li class="list-inline-item"><a href="#skills">SKILLS</a></li>  
+                        <li class="list-inline-item"><a href="#contact">CONTACT</a></li>
+                    </ul>
+                    <p class="text-center">Copyright © 2022 <span>iambrianrivera</span>. All Rights Reserved</p>
+               </div>
+            </footer>
+        </div>
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/14252436d7.js" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scroll/16.1.0/smooth-scroll.min.js" async defer integrity="sha256-CfyPGYLRQ4v1O+mZa5ocQglABXGuaZmmfe8awy8Fxis=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.7.6/jquery.nicescroll.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" integrity="sha256-z6FznuNG1jo9PP3/jBjL6P3tvLMtSwiVAowZPOgo56U=" crossorigin="anonymous"></script>
+        <script src="https://cdn.rawgit.com/twbs/bootstrap/v3.3.7/js/affix.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" integrity="sha256-NXRS8qVcmZ3dOv3LziwznUHPegFhPZ1F/4inU7uC8h0=" crossorigin="anonymous"></script>
+        <script src="js/particles.min.js"></script>
+         <script src="js/script.min.js"></script>
+        <script src="https://www.google.com/recaptcha/api.js"></script>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-167867499-1"></script>
+        <script>
+            function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","UA-167867499-1");
+        </script>
+    </body>
+</html>
